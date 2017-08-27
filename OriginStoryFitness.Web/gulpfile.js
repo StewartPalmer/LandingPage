@@ -9,17 +9,11 @@ gulp.task('default', function () {
     // place code for your default task here
 });
 
-//gulpfile.js
 
 
 
-
-//style paths
-var sassFiles = 'assets/styles/sass/**/*.scss',
-    cssDest = 'assets/styles/css/';
-
-gulp.task('styles', function(){
-    gulp.src(sassFiles)
+gulp.task('styles', function () {
+    gulp.src('wwwroot/assets/scss/**/*.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest(cssDest));
+        .pipe(gulp.dest('./wwwroot/assets/css/'));
 });
