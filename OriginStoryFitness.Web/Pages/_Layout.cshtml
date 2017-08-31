@@ -1,18 +1,17 @@
 ﻿<!DOCTYPE html>
-<html class="main_container">
+<html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - OriginStoryFitness.Web</title>
-
+    <link href="~/css/normalize.css" rel="stylesheet" />
     <environment include="Development">  
-        <link href="~/assets/css/main_stylesheet.css" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,900" rel="stylesheet">
+        <link href="~/dev/css/main_stylesheet.css" rel="stylesheet" />   
     </environment>
     <environment exclude="Development">
-        
+        <link href="~/css/main_stylesheet.css" rel="stylesheet" />
     </environment>
-
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,900" rel="stylesheet">
 
 </head>
 <body class="container_inner">

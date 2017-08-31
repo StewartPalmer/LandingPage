@@ -3,46 +3,58 @@
 @{
     ViewData["Title"] = "Home page";
 }
+<div class="main_container">
 
-
-<div class="grid_container">
-    <div class="grid_item grid_item--logo">
-        <div class="grid_item_inner">
-            <br />
-            <br />
-            <h1><i class="fa fa-code" aria-hidden="true"></i> HEY I'll BE A LOGO</h1>
+    <div class="grid_container">
+        <div class="grid_item grid_item--logo">
+            <div class="grid_item_inner">
+                <div class="logo_container">
+                    <div class="logo_container_inner">
+                        <img src="~/images/supersoilderl_Logo.svg" />
+                    </div>
+                </div>
+                <div class="author_box"><div class="author_box_inner"><span>Issue 1 |  By Ben Mudge </span></div></div>
+            </div>
         </div>
-    </div>
-    <div class="grid_item grid_item--feature">
-        <div class="grid_item_inner">
-            <img src="~/assets/images/osf_final.svg" />
-            <div class="text_area">
-                <div class="text_area_inner">
-                    <p>Train like a Hero, and start your origin story today! </p>
+        <div class="grid_item grid_item--feature">
+            <div class="grid_item_inner">
+
+                <img src="~/images/osf_final.svg" />
+
+                <div class="text_area">
+                    <div class="text_area_inner">
+                        <p>Train like a Hero, and start your origin story today! </p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="grid_item grid_item--signup">    
-        <div class="row signupform form-cotainer">
-            <div class="row"><h5>Intrested? Sign up!</h5></div>
-            <div class="row">
-                <div class="col s4">
-                    <input placeholder="Name" id="name" type="text" class="validate">
-                    <label for="first_name">First Name</label>
-                </div>
-                <div class="col s4">
-                    <input id="email" type="email" class="validate">
-                    <label for="email">Email</label>
-                </div>
-                <div class="col s4">
-                    <a class="waves-effect waves-light btn"><i class="material-icons right"></i>Sign Up</a>
+        <div class="grid_item grid_item--signup">
+            <div class="sign_form">
+                <div class="sign_form_inner">
+                    <ul>
+                        <li>
+
+                            <label for="first_name">First Name</label> <input placeholder="Name" id="name" type="text" class="validate">
+                        </li>
+                        <li>
+                            <label for="email">Email</label>
+
+                            <input id="email" type="email" class="validate">
+
+                        </li>
+                        <li>
+                            <a class="comic_btn"><i class="material-icons right"></i>Sign Up</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
+
+
         </div>
-    </div>
-    <div class="grid_item grid_item--dummy_one">
-    </div>
-    <div class="grid_item grid_item--dummy_two">
+        @*<div class="grid_item grid_item--dummy_one">
+        </div>
+        <div class="grid_item grid_item--dummy_two">
+        </div>*@
     </div>
 </div>
+<div> <h1>HEy</h1></div>
