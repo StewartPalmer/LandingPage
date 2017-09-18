@@ -7,30 +7,25 @@
 
 
     <link href="~/css/normalize.css" rel="stylesheet" />
+    <script src="~/js/jquery-3.2.1.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,700" rel="stylesheet">   
     <environment include="Development">  
         <link href="~/dev/css/main_stylesheet.css" rel="stylesheet" />   
+        <script src="~/js/materialize.js"></script>
+        <link href="~/css/materialize.css" rel="stylesheet" />
+        <link href="~/css/font-awesome.css" rel="stylesheet" />
     </environment>
     <environment exclude="Development">
         <link href="~/css/main_stylesheet.css" rel="stylesheet" />
-
+        <script src="~/js/materialize.min.js"></script>
+        <link href="~/css/materialize.min.css" rel="stylesheet" />
+        <link href="~/css/font-awesome.min.css" rel="stylesheet" />
     </environment>
-    <script src="https://use.fontawesome.com/539402554b.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400" rel="stylesheet">
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
 </head>
-<body class="container_inner">
-
-
-        @RenderBody()     
- 
-
-    
-
-    @RenderSection("Scripts", required: false)
+<body>
+        @RenderBody()       
 </body>
 </html>
