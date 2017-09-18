@@ -1,217 +1,280 @@
 ﻿
 
+@mixin vertical-align($position: relative) {
+    position: $position;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
 $border-color: #c0392b;
 $fontfamily: 'Montserrat', sans-serif;
 
 
-
-$break-small: 320px;
+$blue: #20346F;
+$red: #C0120B;
+$white: #d9d9d9;
+$break-extrasmall: 320px;
+$break-small: 620px;
+$break-medium: 920;
 $break-large: 1200px;
 
 
-@keyframes animatedBackground {
-    from {
-        background: url('/assets/images/1.jpg') 0 0 no-repeat;
-        background-size: cover;
-        -webkit-transform: rotate(0deg);
-    }
 
-    to {
-        background: url('/assets/images/1.jpg') 0 0 no-repeat;
-        background-size: cover;
-        -webkit-transform: rotate(360deg);
-    }
-}
 
 .main_container {
-    min-height: 100vh;
+    height: 100vh;
     width: 100%;
+    background-color: #000000;
     overflow: hidden;
-    background-color: #7f8c8d;
 }
 
-
-.grid_container {
-
-
-        -ms-transform: rotate(7deg); /* IE 9 */
-        -webkit-transform: rotate(7deg); /* Chrome, Safari, Opera */
-        transform: rotate(7deg);  
-
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 25% 15% 35% 25%;
-    padding: 2em;
-    display: grid;
-    grid-gap: 1em;
+.signup {
+    height: 100%;
     width: 100%;
-    height: 150%;
-    background: white;
+    background-color: $blue;
+    background-image: url('../../images/artboard 1.svg');
+    background-repeat: no-repeat;
+    background-size: 130vh;
+    background-position: right center;
+    background-attachment: fixed;
+    overflow: hidden;
+    position: relative;
 }
 
-.grid_item {
-    border: 3px solid #000000;
-    -webkit-backface-visibility: hidden;
-
-    &--logo {
-        grid-column-start: 1;
-        grid-column-end: 4;
-        grid-row: 1 / 4;
-        background-color: $border-color;
-        background-repeat: repeat-x;
-        background-image: url('/images/background.png');
-        background-size: cover;
-    }
-
-
-    &--feature {
-        grid-column: 4;
-        grid-row: 1 / 4;
-        background-color: #8e44ad;
-        background-image: url('/images/background.png');
-        background-size: cover;
-    }
-
-    &--dummy_one {
-        grid-column: 1/3;
-        grid-row: 4;
-        background-color: #d35400;
-        height: 100%;
-    }
-
-    &--signup {
-        grid-column: 1/5;
-        grid-row: 4;
-        background-color: #3498db;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        background-image: url('/images/background.png');
-        background-size: cover;
-    }
-
-
-    &--dummy_two {
-        grid-column: 3/5;
-        grid-row: 4;
-        background-color: #27ae60;
-        height: 100%;
-    }
-
-    &_inner {
-        color: white;
-        font-family: $fontfamily;
-        font-size: 1.5em;
-        position: relative;
-        height: 100%;
-    }
+.signup_logo {
+    padding-top: 2em;
+    padding-bottom: 2em;
+    padding-right: 2em;
+    background-color: $red;
+    width: 75%;
+    @include vertical-align();
 }
 
 
-.text_area {
-    margin: 1em;
-    background-color: white;
-    color: black;
-    border: 2px solid #000000;
-    position: absolute;
-    bottom: 0;
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-
-    &_inner {
-        margin: 0.4em;
-    }
+.logo {
 }
 
-.logo_container {
-    padding: 2em;
-
-    &_inner {
-        padding: 1em;
-        background-color: #454545;
-        -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-        -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-
-        & img {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 100%;
-            max-width: 985px;
-        }
-    }
+.logo_inner {
+    background-color: $white;
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 
-.author_box {
-    font-size: 1em;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    padding: 1em;
-
-    &_inner {
-        background-color: #f1c40f;
-        padding: 1em;
-        color: #000000;
-        border: 2px solid #000000;
-        -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-        -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    }
+.logo_logo {
+    display: block;
+    margin: auto;
+    width: 100%;
+    max-width: 1000px;
 }
 
 
-.comic_btn {
-    background-color: #3498db;
-    font-family: $fontfamily;
-    padding: 0.6em 2em;
+
+.features {
+    overflow: hidden;
+    background-color: $red;
+    min-height: 100vh;
+    background-image: url('../../images/osf_logo.svg');
+    background-repeat: no-repeat;
+    background-size: 130vh;
+    background-position: left center;
+    background-attachment: fixed;
+}
+
+.featurelist {
+    background-color: $white;
+    height: 100%;
+    min-height: 100vh;
+    width: 40%;
+    float: right;
+}
+
+.featurelist_inner {
+    padding-top: 3em;
+}
+
+.featureitem {
+    height: auto;
+    width: 100%;
+    background-color: $white; 
+    margin-bottom: 4em;
+    position: relative;  
+}
+
+.featureitem--guide::before {
+    content: "\f200";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    /*--adjust as necessary--*/
     color: white;
-    margin: 1em;
-    border: 2px solid #000000;
+    background-color: $blue;
+    font-size: 40px;
+    line-height: 40px;
+    padding: 10px;       
+    position: absolute;
+    left: -10%;
+    top: 0;
+}
 
-    &:hover {
-        background-color: #2980b9;
-        -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
-        -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
-        box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+
+.featureitem--phase::before {
+    content: "\f021";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    /*--adjust as necessary--*/
+    color: white;
+    background-color: $blue;
+    font-size: 40px;
+    line-height: 40px;
+    padding: 10px;
+    position: absolute;
+    left: -10%;
+    top: 0;
+}
+
+.featureitem--checkin::before {
+    content: "\f274";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    /*--adjust as necessary--*/
+    color: white;
+    background-color: $blue;
+    font-size: 40px;
+    line-height: 40px;
+    padding: 10px;
+    position: absolute;
+    left: -10%;
+    top: 0;
+}
+
+
+
+.featureitem_inner {
+    height: 100%;
+    width: 100%;
+    background-color: $white;
+}
+
+.feature_text {
+    font-family: $fontfamily;
+    font-size: 25px;
+    font-weight: 200;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.feature_heading {
+    font-size: 30px;
+    color: $red;
+
+}
+
+
+.spacer {
+    height: 2em;
+    background-color: $white;
+}
+
+
+@media screen and (max-width : 1224px) {
+
+    .signup_logo {
+        width: 100%;
+        padding-right: 0;
+    }
+    .featurelist {
+        margin-top: 30vh;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        float: none;
+       
+    }
+    .featureitem {
+      
     }
 }
 
-.sign_form {
-    padding: 4em;
+.signup_btmbox {
+    position: absolute;
+    bottom: 2em;
+    width: 100%;
+    padding: 1em 2em 1em 2em;
 
-    &_inner {
-        background-color: white;
-        border: 2px solid #000000;
-        -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-        -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
 
-        & ul {
+    background-color: $white;
 
-            & li {
-                display: inline-block;
-                margin: 1em;
+}
 
-                & input {
-                    border: 2px solid #000000;
-                    -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
-                    -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
-                    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
-                    font-family: $fontfamily;
-                    font-size: 1em;
-                    margin: 0.2em;
-                }
 
-                & label {
-                    font-family: $fontfamily;
-                    font-weight: 600;
-                }
-            }
-        }
+.coming_sooner {
+    background-color: $red;
+    height: auto;
+    width: 100%;
+    position: absolute;
+    top: 5%;
+    right: -20%;
+    overflow: hidden;
+    color: $white;
+    font-family: $fontfamily;
+    text-align: center;
+    transform: rotate(25deg)
+}
+
+
+.btn, .btn-large {
+    background-color: $blue !important;
+}
+.submit {
+    width: 100%;
+ 
+}
+@media screen and (max-width : 600px) {
+
+    .signup_logo {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .featurelist {
+        margin-top: 30vh;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        float: none;
+    }
+
+
+
+    .featureitem--guide::before {
+        content: "";
+    }
+
+
+    .featureitem--phase::before {
+        content: "";
+    }
+
+    .featureitem--checkin::before {
+        content: "";
+    }
+
+
+
+
+    .coming_sooner {      
+      
+        top: 0%;
+        right: 0%;      
+    
+        text-align: right;
+        transform: rotate(0deg)
     }
 }
