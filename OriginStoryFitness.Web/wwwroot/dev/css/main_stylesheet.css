@@ -131,7 +131,7 @@
   color: #C0120B; }
 
 .spacer {
-  height: 2em;
+  min-height: 2em;
   background-color: #d9d9d9; }
 
 @media screen and (max-width: 1224px) {
@@ -140,17 +140,18 @@
     padding-right: 0; }
   .featurelist {
     margin-top: 30vh;
-    width: 80%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     float: none; } }
 
 .signup_btmbox {
-  position: absolute;
-  bottom: 2em;
+  position: fixed;
+  bottom: 0;
   width: 100%;
-  padding: 1em 2em 1em 2em;
-  background-color: #d9d9d9; }
+  padding: 1em 1em 1em 1em;
+  background-color: white;
+  z-index: 10; }
 
 .coming_sooner {
   background-color: #C0120B;
@@ -171,12 +172,19 @@
 .submit {
   width: 100%; }
 
+@media screen and (max-height: 600px) {
+  .signup_btmbox {
+    position: relative; } }
+
 @media screen and (max-width: 600px) {
+  .signup_btmbox {
+    position: relative; }
   .signup_logo {
     width: 100%;
     padding-right: 0; }
   .featurelist {
     margin-top: 30vh;
+    margin-bottom: 30vh;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
