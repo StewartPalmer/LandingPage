@@ -47,6 +47,83 @@ $black: #000000;
 
 
 
+.slideInLeft {
+    -webkit-animation-name: slideInLeft;
+    animation-name: slideInLeft;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes slideInLeft {
+    0% {
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+        visibility: visible;
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+        visibility: visible;
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+.slideInRight {
+    -webkit-animation-name: slideInRight;
+    animation-name: slideInRight;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes slideInRight {
+    0% {
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+        visibility: visible;
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+        visibility: visible;
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+.element-hidden {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    visibility: visible;
+}
+
+
 .signup-container {
     height: 100vh;
     width: 100%;
@@ -67,13 +144,20 @@ $black: #000000;
     position: relative;
 }
 
+
+
+.signup_logo-container {
+    @include vertical-align();
+}
+
+
 .signup_logo {
     padding-top: 2em;
     padding-bottom: 2em;
     padding-right: 2em;
     background-color: $red;
     width: 75%;
-    @include vertical-align();
+
 }
 
 
@@ -142,8 +226,8 @@ $black: #000000;
 
 .featureitem {
     height: auto;
-    width: 100%;
-    margin-bottom: 4em;
+    width: 80%;    
+    margin: 4em auto 0 auto;
     position: relative;
 
     &::after {
