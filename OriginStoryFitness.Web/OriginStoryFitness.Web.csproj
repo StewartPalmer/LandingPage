@@ -4,13 +4,18 @@
     <UserSecretsId>8266f3f5-7752-4fa7-8f66-b27bf7ea8e67</UserSecretsId>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Remove="wwwroot\webfonts\**" />
+    <Content Remove="wwwroot\webfonts\**" />
+    <EmbeddedResource Remove="wwwroot\webfonts\**" />
+    <None Remove="wwwroot\webfonts\**" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
   </ItemGroup>
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="wwwroot\dev\css\" />
-    <Folder Include="wwwroot\webfonts\" />
+    <Folder Include="wwwroot\js\" />
   </ItemGroup>
 </Project>

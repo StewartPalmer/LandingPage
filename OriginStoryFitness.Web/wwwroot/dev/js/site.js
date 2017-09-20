@@ -1,11 +1,11 @@
 ﻿// Write your Javascript code.
 
 
-var animteHTML = function () {
+var animteHTML = function init () {
     var elements,
         windowHeight
     var init = function () {
-        elements = document.getElementsByClassName('featurelist')
+        elements = document.getElementsByClassName('featurelist_inner ')
         windowHeight = window.innerHeight
         _addEventHandlers() 
 
@@ -28,4 +28,4 @@ var animteHTML = function () {
         init: init
     }
 }
-animateHTML().init()
+animteHTML().init()
