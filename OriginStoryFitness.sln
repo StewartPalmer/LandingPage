@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.10
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OriginStoryFitness.Web", "OriginStoryFitness.Web\OriginStoryFitness.Web.csproj", "{66FB55AB-92B0-402F-9556-2886492F0B51}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OriginStoryFitness.Web", "OriginStoryFitness.Web\OriginStoryFitness.Web.csproj", "{66FB55AB-92B0-402F-9556-2886492F0B51}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{75DFE221-9936-4446-ACBC-6945E42FBB00}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{66FB55AB-92B0-402F-9556-2886492F0B51}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66FB55AB-92B0-402F-9556-2886492F0B51}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66FB55AB-92B0-402F-9556-2886492F0B51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75DFE221-9936-4446-ACBC-6945E42FBB00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75DFE221-9936-4446-ACBC-6945E42FBB00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75DFE221-9936-4446-ACBC-6945E42FBB00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75DFE221-9936-4446-ACBC-6945E42FBB00}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -9,6 +9,7 @@ namespace OriginStoryFitness.Web.Pages
 {
     public class IndexModel : PageModel
     {
+        [ResponseCache(Duration = 30)]
         public void OnGet()
         {
 

@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  originstoryfitness.web:
+    image: originstoryfitness.web
+    build:
+      context: ./OriginStoryFitness.Web
+      dockerfile: Dockerfile
