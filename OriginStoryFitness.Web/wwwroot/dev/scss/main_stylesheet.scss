@@ -215,15 +215,14 @@ $black: #000000;
 }
 
 .featurelist {
-    @include vertical-align();
-    min-height: 80vh;
+    background-color: $pure-white;  
+    min-height: 100vh;
+   
     width: 50%;
     float: right;
-    
 }
 
-.featurelist_inner {
-    background-color: $pure-white;
+.featurelist_inner {  
     padding: 3em;
     width: 100%;
     margin: auto;
