@@ -1,5 +1,4 @@
-# OriginStoryFitness
+# Landing Page
 
 
-Sign up and Brochure Site for Orign Story Fitness
-Origin Story Fitness is Copyright Ben Mudge 2017
+Simple landing page and brochure style site, powered by DotNet API and VUEJs
