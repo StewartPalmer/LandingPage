@@ -1,5 +1,23 @@
+#mce-error-response {
+  visibility: hidden; }
+
+#mce-sucess-response {
+  visibility: hidden; }
+
 body {
   font-size: 16px; }
+
+.video-background {
+  min-width: 100%;
+  height: auto;
+  min-height: 100%;
+  position: fixed;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: -10%;
+  text-align: center; }
 
 .slideInLeft {
   -webkit-animation-name: slideInLeft;
@@ -26,6 +44,54 @@ body {
   100% {
     -webkit-transform: translateX(0);
     transform: translateX(0); } }
+
+@-webkit-keyframes Fade-Out {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@-moz-keyframes Fade-Out {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@-o-keyframes Fade-Out {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@keyframes Fade-Out {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@-webkit-keyframes Fade-In {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-moz-keyframes Fade-In {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes Fade-In {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes Fade-In {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 .slideInRight {
   -webkit-animation-name: slideInRight;
@@ -61,17 +127,17 @@ body {
 .signup-container {
   height: 100vh;
   width: 100%;
-  background-color: #d9d9d9;
+  background-color: #262626;
   overflow: hidden; }
 
 .signup {
   height: 100%;
   width: 100%;
-  background-color: #20346F;
-  background-image: url("../../images/artboard 1.svg");
+  background-color: #262626;
+  background-image: url("https://images.unsplash.com/photo-1491555103944-7c647fd857e6?auto=format&fit=crop&w=1950&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D");
   background-repeat: no-repeat;
-  background-size: 130vh;
-  background-position: right center;
+  background-size: cover;
+  background-position: center;
   background-attachment: fixed;
   overflow: hidden;
   position: relative; }
@@ -84,50 +150,66 @@ body {
   transform: translateY(-50%); }
 
 .signup_logo {
-  padding-top: 2em;
-  padding-bottom: 2em;
-  padding-right: 2em;
-  background-color: #C0120B;
-  width: 75%; }
+  background-color: #ff6a00;
+  width: 75%;
+  padding-left: 20px;
+  font-size: 150px;
+  font-weight: 900; }
 
 /* label focus color */
 .input-field input[type=text]:focus + label {
-  color: #20346F !important; }
+  color: #262626 !important; }
 
 /* label underline focus color */
 .input-field input[type=text]:focus {
-  border-bottom: 1px solid #20346F !important;
-  box-shadow: 0 1px 0 0 #20346F !important; }
+  border-bottom: 1px solid #262626 !important;
+  box-shadow: 0 1px 0 0 #262626 !important; }
 
 .input-field input[type=email]:focus + label {
-  color: #20346F !important; }
+  color: #262626 !important; }
 
 /* label underline focus color */
 .input-field input[type=email]:focus {
-  border-bottom: 1px solid #20346F !important;
-  box-shadow: 0 1px 0 0 #20346F !important; }
+  border-bottom: 1px solid #262626 !important;
+  box-shadow: 0 1px 0 0 #262626 !important; }
 
 .logo_inner {
-  background-color: #ffffff;
-  padding-top: 1em;
-  padding-bottom: 1em; }
+  display: flex;
+  width: 100%;
+  height: 100%; }
+
+.logo_inner-right {
+  display: flex;
+  width: 49%;
+  background-color: #262626;
+  color: #ffffff; }
+
+.logo_inner-left {
+  display: flex;
+  height: 100%;
+  color: #ffffff;
+  width: 49%;
+  text-align: center;
+  align-content: center; }
+
+.logo_inner--text {
+  margin: auto; }
 
 .logo_logo {
-  display: block;
   margin: auto;
   width: 100%;
   max-width: 1000px; }
 
 .features {
   overflow: hidden;
-  background-color: #C0120B;
+  background-color: #ff6a00;
   min-height: 100vh;
   height: 100%;
   width: 100%;
-  background-image: url("../../images/osf_logo.svg");
+  background-image: url("https://images.unsplash.com/photo-1486758206125-94d07f414b1c?auto=format&fit=crop&w=1350&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D");
   background-repeat: no-repeat;
-  background-size: 130vh;
-  background-position: left center;
+  background-size: cover;
+  background-position: center;
   background-attachment: fixed;
   position: relative; }
 
@@ -154,7 +236,7 @@ body {
     left: 0;
     right: 0;
     content: '';
-    background-color: #C0120B; }
+    background-color: #ff6a00; }
 
 .featureitem--guide::before {
   content: "\f200";
@@ -163,7 +245,7 @@ body {
   font-weight: normal;
   text-decoration: inherit;
   color: white;
-  background-color: #C0120B;
+  background-color: #ff6a00;
   font-size: 40px;
   line-height: 40px;
   padding: 10px;
@@ -179,7 +261,7 @@ body {
   font-weight: normal;
   text-decoration: inherit;
   color: white;
-  background-color: #C0120B;
+  background-color: #ff6a00;
   font-size: 40px;
   line-height: 40px;
   padding: 10px;
@@ -195,7 +277,7 @@ body {
   font-weight: normal;
   text-decoration: inherit;
   color: white;
-  background-color: #C0120B;
+  background-color: #ff6a00;
   font-size: 40px;
   line-height: 40px;
   padding: 10px;
@@ -217,18 +299,18 @@ body {
 .feature_heading {
   font-size: 1em;
   font-weight: 700;
-  color: #C0120B; }
+  color: #ff6a00; }
 
 .spacer {
   min-height: 2em;
-  background-color: #d9d9d9; }
+  background-color: #262626; }
 
 .footer {
   padding-top: 1em;
   padding-bottom: 5em;
   width: 100%;
   min-height: 30vh;
-  background-color: #20346F; }
+  background-color: #262626; }
 
 .footer_content {
   display: block;
@@ -236,7 +318,28 @@ body {
   font-weight: 700;
   color: #ffffff; }
   .footer_contenta {
-    color: #C0120B; }
+    color: #ff6a00; }
+
+.js-fade-in {
+  -webkit-animation: Fade-In 0.5s ease-in;
+  /* Safari 4+ */
+  -moz-animation: Fade-In 0.5s ease-in;
+  /* Fx 5+ */
+  -o-animation: Fade-In 0.5s ease-in;
+  /* Opera 12+ */
+  animation: Fade-In 0.5s ease-in;
+  /* IE 10+, Fx 29+ */ }
+
+.js-fade-out {
+  -webkit-animation: Fade-Out 0.5s ease-out;
+  /* Safari 4+ */
+  -moz-animation: Fade-Out 0.5s ease-out;
+  /* Fx 5+ */
+  -o-animation: Fade-Out 0.5s ease-out;
+  /* Opera 12+ */
+  animation: Fade-Out 0.5s ease-out;
+  /* IE 10+, Fx 29+ */
+  opacity: 0; }
 
 @media screen and (max-width: 1224px) {
   .signup_logo {
@@ -263,7 +366,7 @@ body {
     left: 0;
     right: 0;
     content: '';
-    background-color: #C0120B; }
+    background-color: #ff6a00; }
 
 .btmbox_heading {
   font-family: "Montserrat", sans-serif;
@@ -271,17 +374,39 @@ body {
   display: block;
   text-align: center; }
 
+#form_signup {
+  -webkit-animation: Fade-In 0.5s ease-in;
+  /* Safari 4+ */
+  -moz-animation: Fade-In 0.5s ease-in;
+  /* Fx 5+ */
+  -o-animation: Fade-In 0.5s ease-in;
+  /* Opera 12+ */
+  animation: Fade-In 0.5s ease-in;
+  /* IE 10+, Fx 29+ */ }
+
 .btn, .btn-large {
-  background-color: #20346F !important; }
+  background-color: #262626 !important; }
 
 .submit {
   width: 100%; }
 
-@media screen and (max-height: 600px) {
-  .signup_btmbox {
-    position: relative; } }
+@media screen and (max-width: 1070px) {
+  .signup_logo {
+    font-size: 60px; } }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-height: 800px) {
+  .signup_btmbox {
+    position: relative; }
+  .video-background {
+    display: none; } }
+
+@media screen and (max-width: 500px) {
+  .signup_logo {
+    font-size: 30px; } }
+
+@media screen and (max-width: 600px) and (min-width: 501px) {
+  .signup_logo {
+    font-size: 60px; }
   body {
     font-size: 12px; }
   .signup_btmbox {

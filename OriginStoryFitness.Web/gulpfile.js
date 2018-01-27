@@ -1,4 +1,5 @@
-﻿/*
+/// <binding AfterBuild='default' />
+/*
 This file is the main entry point for defining Gulp tasks and using Gulp plugins.
 Click here to learn more. https://go.microsoft.com/fwlink/?LinkId=518007
 */
@@ -9,9 +10,7 @@ var cleanCSS = require('gulp-clean-css');
 var watch = require('gulp-watch');
 
 
-gulp.task('default', function () {
-    // place code for your default task here
-});
+gulp.task('default', ['styles', 'minify-css']);
 
 
 gulp.task('styles', function () {

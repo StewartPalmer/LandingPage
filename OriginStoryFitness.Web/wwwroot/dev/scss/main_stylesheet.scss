@@ -9,11 +9,30 @@
 }
 
 
-body {
+#mce-error-response {
+    visibility: hidden;
+}
 
+#mce-sucess-response {
+    visibility: hidden;
+}
+
+body {
     font-size: 16px;
 }
 
+.video-background {
+    min-width: 100%;
+    height: auto;
+    min-height: 100%;
+    position: fixed;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: -10%;
+    text-align: center;
+}
 @mixin logobefore {
     font-family: FontAwesome;
     font-style: normal;
@@ -34,9 +53,9 @@ $border-color: #c0392b;
 $fontfamily: 'Montserrat', sans-serif;
 
 
-$blue: #20346F;
-$red: #C0120B;
-$white: #d9d9d9;
+$blue: #262626;
+$red: #ff6a00;
+$white: #262626;
 $pure-white: #ffffff;
 $break-extrasmall: 320px;
 $break-small: 620px;
@@ -79,6 +98,92 @@ $black: #000000;
     100% {
         -webkit-transform: translateX(0);
         transform: translateX(0);
+    }
+}
+
+
+
+@-webkit-keyframes Fade-Out {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes Fade-Out {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@-o-keyframes Fade-Out {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes Fade-Out {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+//
+
+
+
+
+@-webkit-keyframes Fade-In {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes Fade-In {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes Fade-In {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes Fade-In {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
 
@@ -135,10 +240,10 @@ $black: #000000;
     height: 100%;
     width: 100%;
     background-color: $blue;
-    background-image: url('../../images/artboard 1.svg');
+    background-image: url('https://images.unsplash.com/photo-1491555103944-7c647fd857e6?auto=format&fit=crop&w=1950&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D');
     background-repeat: no-repeat;
-    background-size: 130vh;
-    background-position: right center;
+    background-size: cover;
+    background-position: center;
     background-attachment: fixed;
     overflow: hidden;
     position: relative;
@@ -151,12 +256,12 @@ $black: #000000;
 }
 
 
-.signup_logo {
-    padding-top: 2em;
-    padding-bottom: 2em;
-    padding-right: 2em;
+.signup_logo {  
     background-color: $red;
     width: 75%;
+    padding-left: 20px;
+    font-size: 150px;
+    font-weight: 900;
 
 }
 
@@ -185,13 +290,34 @@ $black: #000000;
 }
 
 .logo_inner {
-    background-color: $pure-white;
-    padding-top: 1em;
-    padding-bottom: 1em;
+    display: flex;
+    width: 100%;
+    height: 100%;
 }
 
+.logo_inner-right {
+    display: flex;
+    width: 49%;
+    background-color: $white;
+    color: $pure-white;
+}
+
+.logo_inner-left {
+    display: flex;
+    height: 100%;
+    color: $pure-white;
+    width: 49%;
+    text-align: center;
+    align-content: center;
+}
+
+.logo_inner--text {
+
+    margin: auto;
+}
+
+
 .logo_logo {
-    display: block;
     margin: auto;
     width: 100%;
     max-width: 1000px;
@@ -205,13 +331,12 @@ $black: #000000;
     min-height: 100vh;
     height: 100%;
     width: 100%;
-    background-image: url('../../images/osf_logo.svg');
+    background-image: url('https://images.unsplash.com/photo-1486758206125-94d07f414b1c?auto=format&fit=crop&w=1350&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D'); 
     background-repeat: no-repeat;
-    background-size: 130vh;
-    background-position: left center;
+    background-size: cover;
+    background-position: center;
     background-attachment: fixed;
     position: relative;
-
 }
 
 .featurelist {
@@ -308,6 +433,21 @@ $black: #000000;
 }
 
 
+.js-fade-in {
+    -webkit-animation: Fade-In 0.5s ease-in; /* Safari 4+ */
+    -moz-animation: Fade-In 0.5s ease-in; /* Fx 5+ */
+    -o-animation: Fade-In 0.5s ease-in; /* Opera 12+ */
+    animation: Fade-In 0.5s ease-in; /* IE 10+, Fx 29+ */
+}
+
+.js-fade-out {
+    -webkit-animation: Fade-Out 0.5s ease-out; /* Safari 4+ */
+    -moz-animation: Fade-Out 0.5s ease-out; /* Fx 5+ */
+    -o-animation: Fade-Out 0.5s ease-out; /* Opera 12+ */
+    animation: Fade-Out 0.5s ease-out; /* IE 10+, Fx 29+ */
+    opacity: 0;
+}
+
 
 @media screen and (max-width : 1224px) {
 
@@ -334,8 +474,7 @@ $black: #000000;
     width: 100%;
     padding: 1em 1em 1em 1em;
     background-color: $pure-white;
-    z-index: 10;
-
+    z-index: 10;   
     &::before {
         position: absolute;
         top: 0;
@@ -356,6 +495,14 @@ $black: #000000;
 }
 
 
+#form_signup {
+    -webkit-animation: Fade-In 0.5s ease-in; /* Safari 4+ */
+    -moz-animation: Fade-In 0.5s ease-in; /* Fx 5+ */
+    -o-animation: Fade-In 0.5s ease-in; /* Opera 12+ */
+    animation: Fade-In 0.5s ease-in; /* IE 10+, Fx 29+ */
+}
+
+
 .btn, .btn-large {
     background-color: $blue !important;
 }
@@ -364,14 +511,44 @@ $black: #000000;
     width: 100%;
 }
 
-@media screen and (max-height : 600px) {
-    .signup_btmbox {
-        position: relative;
+
+
+
+@media screen and (max-width : 1070px) {
+
+
+    .signup_logo {
+        font-size: 60px;
     }
 }
 
+@media screen and (max-height : 800px) {
+    .signup_btmbox {
 
-@media screen and (max-width : 600px) {
+        position: relative;
+    }
+
+    .video-background {
+        display: none;
+    }
+   
+}
+
+
+@media screen and (max-width: 500px) {
+
+
+    .signup_logo {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width : 600px ) and (min-width: 501px) {
+
+
+    .signup_logo {
+        font-size: 60px;
+    }
 
     body {
         font-size: 12px;
